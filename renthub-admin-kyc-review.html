@@ -42,14 +42,26 @@
   <div class="page-head"><div><h1>KYC</h1><p>Review and manage identity verification.</p></div></div>
   <div class="tabs" data-tab-group data-filter-column="3"><button type="button" class="tab active" data-table-filter="all">All <span data-filter-count></span></button><button type="button" class="tab " data-table-filter="under review">Under Review <span data-filter-count></span></button><button type="button" class="tab " data-table-filter="resubmit">Resubmission <span data-filter-count></span></button><button type="button" class="tab " data-table-filter="verified">Verified <span data-filter-count></span></button><button type="button" class="tab " data-table-filter="rejected">Rejected <span data-filter-count></span></button></div>
   <div class="filter-row"><input data-table-search class="table-search" placeholder="Search by name, email or ID..."></div>
-  <div class="table-card"><table class="data-table"><thead><tr><th>User</th><th>Document Type</th><th>Submitted</th><th>Status</th><th>Actions</th></tr></thead><tbody>
-    <tr data-row data-role="owner"><td><div class="user-cell"><span class="initial">CO</span><span>Chidi Okonkwo</span></div></td><td>NIN</td><td>Apr 26, 2025</td><td><span class="badge yellow">Under Review</span></td><td>...</td></tr>
-    <tr data-row data-role="renter"><td><div class="user-cell"><span class="initial">AB</span><span>Aisha Bello</span></div></td><td>Passport</td><td>Apr 26, 2025</td><td><span class="badge yellow">Under Review</span></td><td>...</td></tr>
-    <tr data-row data-role="renter"><td><div class="user-cell"><span class="initial">JU</span><span>James Uche</span></div></td><td>Driver's License</td><td>Apr 25, 2025</td><td><span class="badge yellow">Under Review</span></td><td>...</td></tr>
-    <tr data-row data-role="owner"><td><div class="user-cell"><span class="initial">FL</span><span>Fatima Lawal</span></div></td><td>NIN</td><td>Apr 25, 2025</td><td><span class="badge yellow">Under Review</span></td><td>...</td></tr>
-    <tr data-row data-role="renter"><td><div class="user-cell"><span class="initial">KE</span><span>Kelechi Eze</span></div></td><td>Voter's Card</td><td>Apr 24, 2025</td><td><span class="badge yellow">Under Review</span></td><td>...</td></tr>
-    <tr data-row data-role="owner"><td><div class="user-cell"><span class="initial">IO</span><span>Ifeoma Okafor</span></div></td><td>Passport</td><td>Apr 24, 2025</td><td><span class="badge yellow">Under Review</span></td><td>...</td></tr>
-  </tbody></table></div>
+  
+<div class="table-card">
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>User</th>
+        <th>Document Type</th>
+        <th>Submitted</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="kyc-table-body">
+      <tr>
+        <td colspan="5">Loading KYC applications...</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
 </section></div>
 <dialog class="profile-dialog" data-profile-dialog aria-labelledby="profile-dialog-title">
   <section class="profile-panel">
@@ -113,4 +125,9 @@
     <button type="button" class="verification-back" data-resubmission-back>Back to KYC</button>
   </section>
 </dialog>
-</main></div></body></html>
+</main></div>
+
+<script src="renthub-admin-auth.js"></script>
+<script src="renthub-admin-kyc.js"></script>
+
+</body></html>
